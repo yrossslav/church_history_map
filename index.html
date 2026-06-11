@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Реформация — генеалогия течений</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="viewport"><svg id="grid"></svg><div id="scene"></div></div>
+
+  <div id="topbar"></div>
+  <div id="axisbar"></div>
+  <div id="minimap"></div>
+
+  <div id="menu">
+    <button id="burger" title="Меню">&#9776;</button>
+    <div id="panel">
+      <div class="ttl">Навигация</div>
+      <label><input type="checkbox" id="t-top" checked> Шапка ветвей сверху</label>
+      <label><input type="checkbox" id="t-axis" checked> Таймлайн слева</label>
+      <label><input type="checkbox" id="t-map" checked> Миникарта</label>
+      <button class="btn" id="resetView">Сбросить вид</button>
+      <button class="btn" id="showBib">Все источники</button>
+    </div>
+  </div>
+
+  <div id="stagetitle"></div>
+  <div id="tip"></div>
+  <div id="datetip"><div class="dy"></div><div class="dt"></div></div>
+  <div id="card"><span class="cl">&times;</span><div class="hd"></div><div class="bd"></div></div>
+  <div id="hint">Колесо — зум · перетащить — двигать · наведите на блок / линию / таймлайн · клик — описание</div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
