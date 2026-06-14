@@ -1,0 +1,4 @@
+# Сгенерированные артефакты сборки (создаются build.py из generator/data/*.yaml)
+generator/reformation.svg
+generator/timeline5_full.svg
+generator/timeline5_standalone.html

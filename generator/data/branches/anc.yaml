@@ -1,0 +1,113 @@
+- id: apost
+  title: Апостольская Церковь
+  sub: Пятидесятница · ~33
+  column: 0
+  year: 33
+  branch: anc
+  info: Церковь, рождённая в день Пятидесятницы (~33 г.); от неё берут начало все церкви и течения христианства. Эпоха гонений,
+    отцов и Вселенских соборов.
+  sources:
+  - sannikov
+  - needham3
+  edges:
+  - to: antenic
+    type: solid
+  - to: ebion
+    type: dash
+    label: иудеохристиане
+- id: antenic
+  title: Доникейская Церковь
+  sub: отцы · апологеты · гонения
+  column: 0
+  year: 120
+  branch: anc
+  info: 'Доникейская Церковь (II–III вв.): эпоха гонений и мучеников, апологетов (Иустин, Тертуллиан) и ранних отцов; формирование
+    канона, правила веры и епископата.'
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+  edges:
+  - to: imperial
+    type: solid
+    label: 313 · 380
+  - to: monast
+    type: solid
+    label: аскеза
+  - to: gnostic
+    type: dash
+    label: ересь · отвергнута
+  - to: montan
+    type: dash
+    label: ересь
+  - to: donat
+    type: dash
+    label: раскол
+  - to: arian
+    type: dash
+    label: осуждено в 325
+  - to: monarch
+    type: solid
+    label: II–III вв.
+- id: monast
+  title: Монашество
+  sub: Антоний · пустынники Египта
+  column: 1
+  year: 300
+  branch: anc
+  info: Монашество (с ~270 — прп. Антоний Великий, затем Пахомий; на Западе — устав прп. Бенедикта) — движение аскезы и ухода
+    от мира. Сохраняется в православии и католичестве доныне.
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+- id: imperial
+  title: Имперская Церковь
+  sub: Феодосий · гос. религия 380
+  column: 0
+  year: 380
+  branch: anc
+  info: 'Имперская Церковь: после Миланского эдикта (313) и провозглашения христианства государственной религией при Феодосии
+    (380) — эпоха Вселенских соборов и союза Церкви с государством.'
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+  edges:
+  - to: assyr
+    type: dash
+    label: Эфесский собор · 431
+  - to: orient
+    type: dash
+    label: Халкидонский собор · 451
+  - to: august
+    type: solid
+    label: отцы Запада
+  - to: antioch
+    type: solid
+    label: древний престол
+  - to: alex
+    type: solid
+    label: древний престол
+  - to: cpole
+    type: solid
+    label: Вселенский престол
+  - to: jerus
+    type: solid
+    label: Халкидон 451
+- id: august
+  title: Августин Иппонский
+  sub: учение о благодати
+  column: 1
+  year: 410
+  branch: anc
+  info: Августин Иппонский (354–430) — крупнейший западный отец Церкви; его учение о грехе, благодати и предопределении определило
+    латинское богословие, а позднее вдохновило Лютера и Кальвина.
+  sources:
+  - sannikov
+  - schaff6
+  - mcgrath_thought
+  edges:
+  - to: pelag
+    type: dash
+    label: спор о благодати

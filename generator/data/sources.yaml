@@ -1,0 +1,113 @@
+needham3:
+  t: 'Needham N. R. 2000 Years of Christ’s Power. Vol. 3: Renaissance and Reformation. Christian Focus, 2016. ISBN 978-1-78191-780-0.'
+  u: https://www.goodreads.com/book/show/31621771
+needham4:
+  t: 'Needham N. R. 2000 Years of Christ’s Power. Vol. 4: The Age of Religious Conflict. Christian Focus, 2017. ISBN 978-1-78191-781-7.'
+  u: ''
+sannikov:
+  t: 'Санников С. В. Двадцать веков христианства. Второе тысячелетие. Одесса: Богомыслие, 2001. — 704 с.'
+  u: https://esxatos.com/sannikov-20-vekov-hristianstva
+schaff6:
+  t: 'Шафф Ф. История христианской церкви. Т. 6: От Бонифация VIII до Реформации (1294–1517). СПб.: Библия для всех, 2009.
+    ISBN 978-5-7454-1151-9.'
+  u: https://azbyka.ru/otechnik/konfessii/istorija-hristianskoj-tserkvi-tom-6/
+schaff7:
+  t: 'Шафф Ф. История христианской церкви. Т. 7: Современное христианство. Реформация в Германии. СПб.: Библия для всех, 2009.'
+  u: https://ccel.org/ccel/schaff/hcc7
+macculloch:
+  t: 'Маккалох Д. Реформация. Полная история протестантизма. М.: Эксмо, 2024. — 864 с.'
+  u: ''
+mcgrath_thought:
+  t: 'Макграт А. Богословская мысль Реформации. Одесса: Богомыслие, 1994. — 316 с. ISBN 5-7707-5698-5.'
+  u: https://esxatos.com/makgrat-bogoslovskaya-mysl-reformacii
+mcgrath_calvin:
+  t: 'Макграт А. Жизнь Жана Кальвина. Минск: Евангелие и Реформация, 2016.'
+  u: ''
+estep:
+  t: 'Эстеп У. Р. История анабаптизма. Радикальная реформация XVI века. Киев: Книгоноша, 2017.'
+  u: ''
+menno_sann:
+  t: Менно Симонс и анабаптисты / ред. С. В. Санников. Samenkorn, 2012.
+  u: ''
+simonov:
+  t: 'Общая история церкви. Т. 1, кн. 2 / ред. В. В. Симонов. М.: Наука, 2017. ISBN 978-5-02-039227-4.'
+  u: ''
+augsburg:
+  t: Аугсбургское вероисповедание (1530) / Ф. Меланхтон.
+  u: https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+helvetic2:
+  t: Второе Гельветическое исповедание (1566).
+  u: http://www.refspb.ru/2009-03-05-15-34-27/4-ispovedanie-very/177-2009-05-20-09-30-49
+trent:
+  t: Тридентский собор. Каноны и декреты / пер. Е. М. Розенблюм, И. И. Аникьев. СПб., 2019.
+  u: ''
+pravenc_gus:
+  t: 'Гус // Православная энциклопедия. Т. 13. М.: ЦНЦ «Православная энциклопедия», 2007. С. 496–499.'
+  u: https://www.pravenc.ru/text/168408.html
+calvin_institutio:
+  t: 'Кальвин Ж. Наставление в христианской вере: в 3 т. М.: Изд-во РГГУ, 1997–1999.'
+  u: https://esxatos.com/kalvin-nastavlenie-v-hristianskoy-vere
+zwingli_works:
+  t: 'Цвингли У. Богословские труды. 3-е изд. М.: ИКАР, 2005. — 556 с.'
+  u: https://esxatos.com/ulrih-zwingli-bogoslovskie-trudy
+calvin_sadoleto:
+  t: 'Оправдание Реформации: ответ Жана Кальвина кардиналу Садолето. Минск: Позитив-центр, 2018. — 72 с. ISBN 978-985-7193-17-2.'
+  u: https://esxatos.com/erik-van-alten-opravdanie-reformacii
+three_forms:
+  t: 'Три формы единства: Гейдельбергский катехизис (1563), Бельгийское исповедание (1561), Каноны Дортского синода (1618–1619).'
+  u: https://www.reformed.org.ua/2-19-Reformedconfessions
+westminster_ru:
+  t: Вестминстерское исповедание веры (1647).
+  u: https://www.reformed.org.ua/2/108/
+scots_conf:
+  t: Шотландское исповедание веры (1560).
+  u: http://www.refspb.ru/2009-03-05-15-34-27/4-ispovedanie-very/1024----1560
+knox_works:
+  t: 'Knox J. The Works of John Knox. Vol. 2. Edinburgh: Wodrow Society, 1846.'
+  u: https://archive.org/details/worksofjohnkn02knox
+shtekli_myuncer:
+  t: 'Штекли А. Э. Томас Мюнцер. М.: Молодая гвардия, 1961. — 318 с. (ЖЗЛ).'
+  u: https://predanie.ru/book/217157-tomas-myuncer/
+pravenc_method:
+  t: 'Методисты // Православная энциклопедия. Т. 45. М.: ЦНЦ «Православная энциклопедия», 2017.'
+  u: https://www.pravenc.ru/text/2563076.html
+saprykin:
+  t: 'Английская реформация: документы и материалы / под ред. Ю. М. Сапрыкина. М.: Изд-во МГУ, 1990. — 104 с.'
+  u: https://www.vostlit.info/Texts/Dokumenty/Engl/XVI/1520-1540/Angl_reformacija/pred.phtml
+savinsky:
+  t: 'История евангельских христиан-баптистов в СССР / сост. С. Н. Савинский и др.; ист. комиссия ВСЕХБ. М.: Изд. ВСЕХБ, 1989.
+    — 624 с.'
+  u: https://mbchurch.ru/upload/iblock/b044d859a8847d7de9541fccf8d8566f/historyofecb33isff.pdf
+pravenc_antioch:
+  t: Антиохийская Православная Церковь // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/115764.html
+pravenc_alex:
+  t: Александрийская Православная Церковь // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/82070.html
+pravenc_cpole:
+  t: Константинопольская Православная Церковь // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/2057124.html
+pravenc_afon:
+  t: Афон // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/77102.html
+pravenc_serb:
+  t: Сербская Православная Церковь // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/2662564.html
+pravenc_armen:
+  t: Армянская Апостольская Церковь // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/76124.html
+pravenc_rocor:
+  t: Русская Православная Церковь Заграницей // Православная энциклопедия.
+  u: https://www.pravenc.ru/text/2661932.html
+azbyka_copt:
+  t: Нелюбов Б. А. Древние Восточные церкви. Коптская церковь.
+  u: https://azbyka.ru/otechnik/Boris-Nelyubov/drevnie-vostochnye-tserkvi-koptskaja-tserkov/
+azbyka_syriac:
+  t: Нелюбов Б. А. Древние Восточные церкви. Сиро-Яковитская церковь.
+  u: https://azbyka.ru/otechnik/Boris-Nelyubov/drevnie-vostochnye-tserkvi-siro-jakovitskaja-tserkov/
+azbyka_china:
+  t: Несторианство в Китае (династии Тан и Юань) // Христианство и китайская культура.
+  u: https://azbyka.ru/otechnik/Istorija_Tserkvi/hristianstvo-i-kitajskaja-kultura/1
+azbyka_pomestnye:
+  t: Блохин В. С. История Поместных Православных Церквей.
+  u: https://azbyka.ru/otechnik/Istorija_Tserkvi/istorija-pomestnyh-pravoslavnyh-tserkvej-blohin/1

@@ -1,0 +1,87 @@
+- id: rcc
+  title: Папство · Запад
+  sub: Григорий I · Рим
+  column: 1
+  year: 700
+  branch: root
+  info: 'Римско-католическая церковь средневекового Запада: рост папства (от Григория Великого), латинское богослужение, союз
+    с империей, монашеские ордена и схоластика.'
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+  edges:
+  - to: benmon
+    type: solid
+  - to: scholast
+    type: solid
+    label: университеты
+  - to: francis
+    type: solid
+    label: нищенств. ордена
+  - to: domin
+    type: solid
+  - to: waldens
+    type: dash
+    label: протест бедноты
+  - to: concil
+    type: solid
+    label: кризис папства
+- id: benmon
+  title: Западное монашество
+  sub: Бенедикт · Клюни
+  column: 2
+  year: 910
+  branch: root
+  info: 'Западное монашество: устав прп. Бенедикта Нурсийского (~540) и клюнийская реформа (X в.) обновили церковную и духовную
+    жизнь Запада.'
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+- id: scholast
+  title: Схоластика
+  sub: Фома Аквинский · университеты
+  column: 2
+  year: 1150
+  branch: root
+  info: 'Схоластика — средневековое университетское богословие (Ансельм, Пётр Ломбардский, Фома Аквинский): синтез веры и
+    аристотелевской философии.'
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+- id: francis
+  title: Францисканцы
+  sub: Франциск Ассизский
+  column: 3
+  year: 1210
+  branch: root
+  info: Францисканцы (с 1209, Франциск Ассизский) — нищенствующий орден проповеди, бедности и милосердия.
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+- id: domin
+  title: Доминиканцы
+  sub: проповедники · инквизиция
+  column: 4
+  year: 1216
+  branch: root
+  info: Доминиканцы (с 1216, св. Доминик) — орден проповедников и учёных; позднее связан с инквизицией.
+  sources:
+  - sannikov
+  - schaff6
+  - needham3
+- id: concil
+  title: Соборное движение
+  sub: Констанц · Базель
+  column: 2
+  year: 1414
+  branch: root
+  info: Соборное движение (XV в., Констанцский и Базельский соборы) — попытка поставить Вселенский собор выше папы ради преодоления
+    Великой схизмы.
+  sources:
+  - sannikov
+  - schaff6
+  - needham3

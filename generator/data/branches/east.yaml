@@ -1,0 +1,111 @@
+- id: assyr
+  title: Церковь Востока
+  sub: несториане · Персия, Азия
+  column: -6
+  year: 431
+  branch: east
+  info: Церковь Востока («несторианская»), не принявшая Эфесский собор 431 г.; широкая миссия в Персии, Средней Азии, Индии
+    и Китае. Существует доныне.
+  sources:
+  - sannikov
+  - needham3
+  live: true
+  edges:
+  - to: thomasind
+    type: solid
+    label: Индия
+  - to: eastasia
+    type: solid
+    label: Персия · Китай
+- id: orient
+  title: Древневосточные церкви
+  sub: копты · армяне · сирийцы
+  column: -5
+  year: 451
+  branch: east
+  info: Древневосточные (дохалкидонские) церкви — Коптская, Армянская, Сирийская, Эфиопская, — отвергшие Халкидонский собор
+    451 г. Существуют доныне.
+  sources:
+  - sannikov
+  - needham3
+  live: true
+  edges:
+  - to: copt
+    type: solid
+  - to: armen
+    type: solid
+    label: Эчмиадзин 491
+  - to: syriac
+    type: solid
+- id: copt
+  title: Коптская церковь
+  sub: монофизиты Египта
+  column: -5
+  year: 460
+  branch: east
+  info: Коптская православная (нехалкидонская) церковь Египта — крупнейшая христианская община Ближнего Востока, колыбель
+    монашества, во главе с папой Александрийским.
+  sources:
+  - sannikov
+  - azbyka_copt
+  live: true
+  edges:
+  - to: ethiop
+    type: solid
+    label: дочерняя
+- id: ethiop
+  title: Эфиопская церковь
+  sub: дочь Александрийской
+  column: -5
+  year: 480
+  branch: east
+  info: Эфиопская (абиссинская) церковь — дочь Александрийской/коптской; приняла нехалкидонское исповедание и сохранила древние
+    иудео-христианские обычаи.
+  sources:
+  - sannikov
+  - azbyka_copt
+  live: true
+- id: armen
+  title: Армянская церковь
+  sub: Эчмиадзин · св. Григорий
+  column: -5
+  year: 491
+  branch: east
+  info: Армянская апостольская церковь — Армения первой приняла христианство как государственную религию; собор в Эчмиадзине
+    (491) отверг Халкидон.
+  sources:
+  - sannikov
+  - pravenc_armen
+  live: true
+- id: thomasind
+  title: Христиане Фомы
+  sub: несториане Индии
+  column: -6
+  year: 530
+  branch: east
+  info: «Христиане апостола Фомы» (Малабар, Индия) — древняя община несторианского толка со своим епископом; засвидетельствована
+    Косьмой Индикопловом.
+  sources:
+  - sannikov
+- id: syriac
+  title: Сиро-яковитская церковь
+  sub: Иаков Барадей
+  column: -5
+  year: 543
+  branch: east
+  info: Сирийская православная (яковитская) церковь — нехалкидонская иерархия с VI в. (Иаков Барадей); имеет крупную паству
+    в Индии.
+  sources:
+  - sannikov
+  - azbyka_syriac
+  live: true
+- id: eastasia
+  title: Несториане Азии
+  sub: Персия · Китай
+  column: -6
+  year: 635
+  branch: east
+  info: Восточная миссия Церкви Востока — из Селевкии-Ктесифона в Персию и до Китая (~635, Сианьская стела 781 г.) и Монголии.
+  sources:
+  - sannikov
+  - azbyka_china

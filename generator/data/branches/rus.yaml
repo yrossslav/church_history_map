@@ -1,0 +1,115 @@
+- id: rusb
+  title: Крещение Руси
+  sub: 988 · кн. Владимир
+  column: -1
+  year: 988
+  branch: rus
+  info: Крещение Руси (988) при князе Владимире — христианство принято из Византии.
+  sources:
+  - sannikov
+  - needham3
+  edges:
+  - to: rusa
+    type: solid
+- id: rusa
+  title: Автокефалия Руси
+  sub: 1448 · «Третий Рим»
+  column: -1
+  year: 1448
+  branch: rus
+  info: Автокефалия Русской церкви (1448) и идея «Москва — Третий Рим».
+  sources:
+  - sannikov
+  - needham3
+  edges:
+  - to: rusp
+    type: solid
+  - to: brest
+    type: dash
+    label: '1596'
+- id: rusp
+  title: Московское патриаршество
+  sub: '1589'
+  column: -1
+  year: 1589
+  branch: rus
+  info: Учреждение Московского патриаршества (1589).
+  sources:
+  - sannikov
+  - needham3
+  edges:
+  - to: rusr
+    type: solid
+  - to: mogila
+    type: dash
+    label: киевское богословие
+  - to: oldbel
+    type: dash
+    label: '1666'
+- id: rusr
+  title: Русская Православная Церковь
+  sub: доныне
+  column: -1
+  year: 1700
+  branch: rus
+  info: Русская Православная Церковь (после раскола 1666 г. и синодального периода) — крупнейшая православная церковь, существует
+    доныне.
+  sources:
+  - sannikov
+  - needham3
+  live: true
+  edges:
+  - to: ru1917
+    type: solid
+    label: собор 1917
+- id: ru1917
+  title: Восстановление патриаршества
+  sub: Собор 1917 · патр. Тихон
+  column: -1
+  year: 1917
+  branch: rus
+  info: Поместный собор 1917–1918 гг. восстановил упразднённое Петром I патриаршество и избрал патриарха Тихона накануне большевистских
+    гонений.
+  sources:
+  - sannikov
+  edges:
+  - to: rocor
+    type: dash
+    label: эмиграция
+  - to: rusovet
+    type: solid
+    label: гонения
+- id: rocor
+  title: Зарубежная церковь (РПЦЗ)
+  sub: эмиграция · Карловцы
+  column: -1
+  year: 1921
+  branch: rus
+  info: Русская православная церковь заграницей (РПЦЗ) — из эмиграции после революции; I Всезарубежный собор в Сремских Карловцах
+    (1921), разрыв с Москвой (1927), воссоединение с РПЦ в 2007.
+  sources:
+  - sannikov
+  - pravenc_rocor
+- id: rusovet
+  title: Советские гонения
+  sub: новомученики · 1927
+  column: -1
+  year: 1927
+  branch: rus
+  info: 'Эпоха советских гонений на РПЦ: массовые расстрелы и закрытие храмов, новомученики, «Декларация» митр. Сергия (1927)
+    о лояльности власти.'
+  sources:
+  - sannikov
+  edges:
+  - to: ru1988
+    type: solid
+- id: ru1988
+  title: Возрождение 1988
+  sub: 1000-летие Крещения Руси
+  column: -1
+  year: 1988
+  branch: rus
+  info: Празднование 1000-летия Крещения Руси (1988) и Поместный собор открыли массовое возрождение православия в СССР и России.
+  sources:
+  - sannikov
+  live: true
