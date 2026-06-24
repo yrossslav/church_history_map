@@ -22,7 +22,7 @@ nodes=[]
 for nid,(c,y,ck,title,sub) in N.items():
     x0,y0,x1,y1=BOX[nid]
     nodes.append({"id":nid,"x":round(x0,1),"y":round(y0,1),"w":round(x1-x0,1),"h":round(y1-y0,1),
-                  "color":COL[ck],"group":ck})
+                  "color":COL[ck],"group":ck,"title":title,"sub":sub or ""})
 
 EVENT_INFO=eng.EVENT_INFO
 events=[]

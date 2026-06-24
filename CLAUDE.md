@@ -23,8 +23,7 @@ generator/
     sources.yaml                 — библиография: ключ → {t: запись, u: URL}
     config.yaml                  — цвета ветвей, эпохи (фон), «широкие» категории, ключевые даты, геометрия
   engine.py                      — рендер: грузит data/*.yaml, строит SVG + раскладку
-  build.py                       — сборка: engine → пишет ../data.js (и generator/reformation.svg)
-  timeline5.py, build_data.py, enrich_data.py — ЛЕГАСИ (старый монолит). Можно удалить.
+  build.py                       — сборка: engine → пишет ../data.js (и generator/reformation.svg для печати)
 ```
 
 **Поток:** правишь YAML в `data/` → `python3 build.py` → обновлённый `data.js` → сайт показывает.

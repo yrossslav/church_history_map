@@ -26,12 +26,14 @@ LIVE=set(_cfg.get("live",[])); PERIODS=[tuple(p) for p in _cfg.get("periods",[])
 KEY=set(_cfg.get("key",[]))
 _geo=_cfg["geometry"]; COLX0=_geo["COLX0"]; CW=_geo["CW"]; TOP=_geo["TOP"]; PXY=_geo["PXY"]; MINGAP=_geo["MINGAP"]; NCOLS=_geo["NCOLS"]; RKC_YEAR=_geo["RKC_YEAR"]
 BIB=_ly(os.path.join(_D,"sources.yaml"))
-N={}; INFO={}; SRC={}; E=[]; EDGE_INFO={}
+N={}; INFO={}; SRC={}; E=[]; EDGE_INFO={}; SITE={}; WHY={}
 for _f in sorted(glob.glob(os.path.join(_D,"branches","*.yaml"))):
     for c in _ly(_f):
         nid=c["id"]; N[nid]=(c["column"],c["year"],c["branch"],c["title"],c.get("sub",""))
         if c.get("info"): INFO[nid]=c["info"]
         if c.get("sources"): SRC[nid]=c["sources"]
+        if c.get("site"): SITE[nid]=c["site"]
+        if c.get("datenote"): WHY[nid]=c["datenote"]
         for e in c.get("edges",[]):
             E.append((nid,e["to"],e.get("type","solid"),e.get("label","")))
             if e.get("info"): EDGE_INFO[(nid,e["to"])]=e["info"]
@@ -131,20 +133,26 @@ for nid,(c,y,ck,title,sub) in N.items():
 def conn(a,b,kind,lab):
     x0,y0,x1,y1=BOX[a];xb0,yb0,xb1,yb1=BOX[b]
     pcx=(x0+x1)/2;pby=y1;ccx=(xb0+xb1)/2;cty=yb0;dd=(kind=="dash")
+    seg=[]
+    def L(ax,ay,bx,by):
+        s=f'<line x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" stroke="{EDGE}" stroke-width="1.7"'
+        if dd:s+=' stroke-dasharray="7,5"'
+        seg.append(s+'/>')
     if abs(pcx-ccx)<2:
-        lineto(pcx,pby,ccx,cty,dd);pts=[(pcx,pby),(ccx,cty)]
+        L(pcx,pby,ccx,cty);pts=[(pcx,pby),(ccx,cty)]
     else:
         midy=(pby+cty)/2
-        lineto(pcx,pby,pcx,midy,dd);lineto(pcx,midy,ccx,midy,dd);lineto(ccx,midy,ccx,cty,dd)
+        L(pcx,pby,pcx,midy);L(pcx,midy,ccx,midy);L(ccx,midy,ccx,cty)
         pts=[(pcx,pby),(pcx,midy),(ccx,midy),(ccx,cty)]
-    arrow(ccx,cty)
+    seg.append(f'<polygon points="{ccx:.1f},{cty:.1f} {ccx-5.5:.1f},{cty-8.5:.1f} {ccx+5.5:.1f},{cty-8.5:.1f}" fill="{EDGE}"/>')
+    LINES.append(f'<g class="cline" data-f="{a}" data-tt="{b}">'+"".join(seg)+'</g>')   # помечена концами — для скрытия по семейству
     ta=N[a][3].replace("\n"," ");tb=N[b][3].replace("\n"," ")
     info=EDGE_INFO.get((a,b)) or ((lab+". ") if lab else "")+f"Связь: {ta} → {tb}."
-    eidx=len(EDGES_JS);EDGES_JS.append([a,b]);hitline(pts,info,f"{ta} → {tb}",f"edge{eidx}",",".join(SRC.get(b,[])))
+    eidx=len(EDGES_JS);EDGES_JS.append([a,b,kind,lab]);hitline(pts,info,f"{ta} → {tb}",f"edge{eidx}",",".join(SRC.get(b,[])))
 for a,b,kind,lab in E: conn(a,b,kind,lab)
 for i,(ch,lab) in enumerate(BAND_CHILD):
     xb0,yb0,xb1,yb1=BOX[ch];ccx=(xb0+xb1)/2
-    lineto(ccx,BANDY+24,ccx,yb0);arrow(ccx,yb0)
+    LINES.append(f'<g class="cline" data-tt="{ch}"><line x1="{ccx:.1f}" y1="{BANDY+24:.1f}" x2="{ccx:.1f}" y2="{yb0:.1f}" stroke="{EDGE}" stroke-width="1.7"/><polygon points="{ccx:.1f},{yb0:.1f} {ccx-5.5:.1f},{yb0-8.5:.1f} {ccx+5.5:.1f},{yb0-8.5:.1f}" fill="{EDGE}"/></g>')
     info=BAND_INFO.get(ch) or (("РЕФОРМАЦИЯ → "+N[ch][3].replace(chr(10)," ")+". ")+(lab+"." if lab else ""))
     hitline([(ccx,BANDY+24),(ccx,yb0)],info,"Реформация → "+N[ch][3].replace(chr(10)," "),f"edgeb{i}",",".join(SRC.get(ch,[])))
 gx0,gy0,gx1,gy1=BOX["hus"];gcx=(gx0+gx1)/2
@@ -192,11 +200,11 @@ for nid,(c,y,ck,title,sub) in N.items():
     x0,y0,x1,y1=BOX[nid];col=COL[ck];cx=(x0+x1)/2
     info=INFO.get(nid,"")
     if nid=="apost":                       # широкая плашка «АПОСТОЛЬСКАЯ ЦЕРКОВЬ»
-        BOXES.append(f'<g class="it node" data-id="apost" data-t="{esc(title)}" data-i="{esc(info)}" data-c="{COL["anc"]}" data-src="{",".join(SRC.get("apost",[]))}">')
+        BOXES.append(f'<g class="it node" data-id="apost" data-t="{esc(title)}" data-i="{esc(info)}" data-c="{COL["anc"]}" data-src="{",".join(SRC.get("apost",[]))}" data-year="{y}" data-why="{esc(WHY.get("apost",""))}">')
         BOXES.append(f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{x1-x0:.1f}" height="{y1-y0:.1f}" rx="9" fill="{COL["anc"]}"/>')
         tspans(BOXES,cx,(y0+y1)/2,["АПОСТОЛЬСКАЯ ЦЕРКОВЬ"],18,WHITE,b=True)
         BOXES.append('</g>');continue
-    BOXES.append(f'<g class="it node" data-id="{nid}" data-t="{esc(title.replace(chr(10)," "))}" data-i="{esc(info)}" data-c="{col}" data-src="{",".join(SRC.get(nid,[]))}">')
+    BOXES.append(f'<g class="it node" data-id="{nid}" data-t="{esc(title.replace(chr(10)," "))}" data-i="{esc(info)}" data-c="{col}" data-src="{",".join(SRC.get(nid,[]))}" data-site="{esc(SITE.get(nid,""))}" data-year="{y}" data-why="{esc(WHY.get(nid,""))}">')
     if nid=="mun":
         BOXES.append(f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{x1-x0:.1f}" height="{y1-y0:.1f}" rx="9" fill="{col}" stroke="#D8C8E0" stroke-width="1.4" stroke-dasharray="6,4"/>')
     else:

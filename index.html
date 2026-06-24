@@ -13,6 +13,11 @@
   <div id="axisbar"></div>
   <div id="minimap"></div>
 
+  <div id="search">
+    <input id="sq" type="text" placeholder="Поиск течения…" autocomplete="off" spellcheck="false">
+    <div id="sresults"></div>
+  </div>
+
   <div id="menu">
     <button id="burger" title="Меню">&#9776;</button>
     <div id="panel">
@@ -20,6 +25,12 @@
       <label><input type="checkbox" id="t-top" checked> Шапка ветвей сверху</label>
       <label><input type="checkbox" id="t-axis" checked> Таймлайн слева</label>
       <label><input type="checkbox" id="t-map" checked> Миникарта</label>
+      <div class="ttl" style="margin-top:8px">Семейства ветвей</div>
+      <div id="fams"></div>
+      <button class="btn" id="showAll">Показать всё</button>
+      <button class="btn" id="toggleLegend">Легенда ▾</button>
+      <div id="legend"></div>
+      <button class="btn" id="compareTree">Сравнить выбранные ветви ▦</button>
       <button class="btn" id="resetView">Сбросить вид</button>
       <button class="btn" id="showBib">Все источники</button>
     </div>
@@ -29,7 +40,13 @@
   <div id="tip"></div>
   <div id="datetip"><div class="dy"></div><div class="dt"></div></div>
   <div id="card"><span class="cl">&times;</span><div class="hd"></div><div class="bd"></div></div>
-  <div id="hint">Колесо — зум · перетащить — двигать · наведите на блок / линию / таймлайн · клик — описание</div>
+  <div id="treeview"><span class="cl">&times;</span>
+    <div class="tvh"><button class="tvnav" data-n="back" title="Назад">&larr;</button><button class="tvnav" data-n="fwd" title="Вперёд">&rarr;</button><span class="tvt"></span><button class="tvmode" data-m="anc" title="Откуда произошло">&uarr; предки</button><button class="tvmode" data-m="desc" title="Что произошло от неё">&darr; потомки</button><button class="tvmode" data-m="both" title="Предки и потомки вместе">&harr; вместе</button></div>
+    <div class="tvbody"></div>
+    <div class="tvctl"><button data-z="in" title="Приблизить">+</button><button data-z="out" title="Отдалить">&minus;</button><button data-z="fit" title="Вписать">&#9974;</button></div>
+    <div class="tvhint">колесо — зум · тянуть — двигать · клик по блоку — карточка</div>
+  </div>
+  <div id="hint">Поиск сверху · клик по блоку — карточка и родословная · колесо — зум · меню (☰) — семейства и легенда</div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>

@@ -34,30 +34,90 @@ wide:
   ana:
   - 4
   - 5
+  byz:
+  - -4
+  - -1
+  rcc:
+  - 0
+  - 5
+  awakening:
+  - 5
+  - 10
+  met:
+  - 7
+  - 10
+  missions:
+  - 17
+  - 24
+  oldbel:
+  - -4
+  - -3
+  nld:
+  - 2
+  - 3
+  antenic:
+  - 0
+  - 3
+  silverage:
+  - -3
+  - -1
+  arian:
+  - 3
+  - 5
 live:
 - advent
+- afpent
+- aic
 - ami
 - ang
 - armen
 - assyr
+- bespopovtsy
 - brethren
+- bulgarp
 - catholmod
 - charism
+- china3self
+- chinahouse
+- christsci
+- cni
+- confess
+- congreg
 - copt
+- crc
+- csi
+- dukhob
 - ecumen
+- edinoverie
 - ethiop
 - fundament
+- glinsk
 - globalsouth
 - greekoc
+- hutter
 - inkv
+- japan
+- jw
 - knox
+- koreapent
+- lapent
+- libtheo
 - lutc
 - men
+- menbr
 - met
+- mormon
 - nld
+- oca
+- oldcath
+- opc
+- optina
 - orient
 - oxford
+- popovtsy
+- prosperity
 - qua
+- rca
 - restor
 - romanian
 - rse
@@ -66,7 +126,10 @@ live:
 - rusr
 - salvarmy
 - syriac
+- thirdwave
 - ubr
+- unification
+- uspresb
 - vse
 - waldens
 periods:
@@ -102,7 +165,7 @@ geometry:
   PXY: 1.7
   MINGAP: 66
   RKC_YEAR: 680
-  NCOLS: 17
+  NCOLS: 25
 groups:
 - - Предшественники · гуманисты
   - pre
@@ -295,3 +358,11 @@ stages:
       - contra
       - 16
       - 16
+    - - Миссии
+      - pent
+      - 17
+      - 19
+    - - Мировое христианство
+      - pent
+      - 20
+      - 24
