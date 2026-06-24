@@ -341,6 +341,36 @@ document.getElementById('showBib').addEventListener('click',()=>{menu.classList.
   bd.appendChild(sd);card.style.display='block';
   card.style.left=Math.max(8,(innerWidth-Math.min(380,innerWidth-16))/2)+'px';card.style.top='64px';});
 
+/* ——— О проекте: инструкция / changelog / обратная связь ——— */
+function openInfoCard(title,html){menu.classList.remove('open');clearFocus();
+  card.querySelector('.hd').textContent=title;card.querySelector('.hd').style.background='#6E1423';
+  card.querySelector('.bd').innerHTML=html;card.style.display='block';hideTip();
+  card.style.left=Math.max(8,(innerWidth-Math.min(380,innerWidth-16))/2)+'px';card.style.top='56px';}
+document.getElementById('showHelp').addEventListener('click',()=>openInfoCard('Как пользоваться',
+  `<p>Карта — генеалогия церквей и течений христианства от апостольской Церкви (~33 г.) до наших дней.</p>
+   <p><b>Навигация:</b> колесо — масштаб, перетаскивание — двигать (как в Miro). Слева — лента дат, сверху — шапка ветвей, справа снизу — миникарта.</p>
+   <p><b>Блоки:</b> наведение увеличивает; клик открывает карточку с описанием, годом, источниками и (для действующих движений) ссылкой на официальный сайт.</p>
+   <p><b>Связи:</b> сплошная линия — прямое происхождение, пунктир — влияние/реакция. Наведение на линию — подпись, клик — её описание.</p>
+   <p><b>Поиск</b> (поле сверху): по названиям и по тексту описаний.</p>
+   <p><b>Меню (☰):</b> легенда (клик по ветви выделяет её, можно несколько); показать/скрыть семейства ветвей; «Сравнить выбранные ветви».</p>
+   <p><b>«Посмотреть ветвь целиком»</b> (кнопка в карточке): отдельное окно с деревом — режимы «предки / потомки / вместе», свой зум и навигация вперёд/назад; клик по блоку — карточка, по связи — описание.</p>`));
+document.getElementById('showChangelog').addEventListener('click',()=>openInfoCard('Что нового',
+  `<p><b>Июнь 2026</b> · исследовательский превью</p>
+   <ul>
+   <li>Поиск по названиям и описаниям (с фрагментом текста в подсказке).</li>
+   <li>Легенда: цвета ветвей и смысл линий; клик по ветви — выделение (мультивыбор).</li>
+   <li>Окно «ветвь целиком»: древовидная раскладка по поколениям, режимы предки/потомки/вместе, зум-пан, навигация вперёд-назад, клик по связям, год на блоках.</li>
+   <li>Карточки: пояснение выбранного года; ссылки на официальные сайты действующих движений.</li>
+   <li>Сворачивание семейств ветвей; мобильная версия (тач, пинч-зум).</li>
+   <li>Наполнение: 217 узлов, 264 связи — мировое христианство (миссии, Лат. Америка, Африка, Азия), Новое время Запада, углубление Востока (диаспора, старообрядцы, старчество), ранняя и средневековая Церковь.</li>
+   <li>Выверена генеалогия: все ветви восходят к апостольской Церкви.</li>
+   </ul>`));
+document.getElementById('showFeedback').addEventListener('click',()=>openInfoCard('Обратная связь',
+  `<p>Нашли ошибку или неточность, есть идея или замечание — буду очень рад отклику:</p>
+   <p>✉ Почта: <a href="mailto:yrossslav@gmail.com">yrossslav@gmail.com</a><br>
+   ✈ Telegram: <a href="https://t.me/yrossslav" target="_blank" rel="noopener">@yrossslav</a></p>
+   <p>Спасибо, что помогаете проверить карту!</p>`));
+
 /* ——— поиск по карте ——— */
 const sq=document.getElementById('sq'),sres=document.getElementById('sresults'),searchBox=document.getElementById('search');
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

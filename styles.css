@@ -32,6 +32,11 @@ html,body{margin:0;height:100%;background:var(--cream);overflow:hidden;
 #card .bd{padding:13px 16px 16px;font-size:14.5px;line-height:1.5}
 #card .cl{position:absolute;top:8px;right:12px;color:#fff;font-size:21px;font-weight:700;cursor:pointer;opacity:.9}
 #card .bd{max-height:70vh;overflow:auto}
+#card .bd p{margin:0 0 9px}
+#card .bd ul{margin:0 0 9px;padding-left:18px}
+#card .bd li{margin-bottom:5px}
+#card .bd a{color:#0E7C66;text-decoration:none;border-bottom:1px solid rgba(14,124,102,.4)}
+#card .bd a:hover{border-bottom-color:#0E7C66}
 #card .src{margin-top:12px;padding-top:10px;border-top:1px solid #eadfca}
 #card .src .st{font-weight:700;color:var(--bordo);font-size:12px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px}
 #card .src .si{font-size:12.5px;line-height:1.4;color:#5A4632;margin-bottom:5px}
