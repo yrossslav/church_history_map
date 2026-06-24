@@ -1,4 +1,5 @@
-# Сгенерированные артефакты сборки (создаются build.py из generator/data/*.yaml)
+# Сгенерированный артефакт сборки (создаётся build.py для печати/PDF; сайтом не используется)
 generator/reformation.svg
-generator/timeline5_full.svg
-generator/timeline5_standalone.html
+
+# Локальные настройки Claude
+.claude/
